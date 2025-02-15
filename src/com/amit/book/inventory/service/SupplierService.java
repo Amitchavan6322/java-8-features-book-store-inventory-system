@@ -42,10 +42,14 @@ public class SupplierService implements SupplierServiceInterface {
 
     public void displaySupplierInfo(){
 
-        for(Map.Entry<Integer, Supplier>set : suppliers.entrySet()){
+        // old for each loop
+        /*for(Map.Entry<Integer, Supplier>set : suppliers.entrySet()){
             System.out.println("Supplier ID : " +set.getKey() + " = " + "Supplier Info : "
                     + set.getValue());
-        }
+        }*/
+
+        // java8 feature forEach loop
+        suppliers.forEach((supplierID, supplier) -> System.out.println("Supplier ID: " + supplierID + " = Supplier Info: " + supplier));
     }
 
 }

@@ -10,9 +10,14 @@ public abstract class LibraryService {
     protected HashMap<Integer, Book> books = new HashMap<>();
 
     public void displayAllBooks() {
-        for (Map.Entry<Integer, Book> entry : books.entrySet()) {
+
+        // old for each loop
+        /*for (Map.Entry<Integer, Book> entry : books.entrySet()) {
             System.out.println("Book ID: " + entry.getKey() + " - " + entry.getValue());
-        }
+        }*/
+
+        // java8 feature forEach loop
+        books.forEach((id, book) -> System.out.println("Book ID: " + id + " = Book Info: " + book));
     }
 
     public Book getBookById(int bookId) throws InvalidBookIDException {

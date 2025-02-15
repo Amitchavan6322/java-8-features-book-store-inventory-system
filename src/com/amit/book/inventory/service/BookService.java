@@ -90,9 +90,14 @@ public class BookService extends LibraryService implements BookServiceInterface 
 
         public void displayBookInfo () {
             System.out.println("inside display book info map size = " +books.size());
-            for (Map.Entry<Integer, Book> set : books.entrySet()) {
+
+            // old for each loop
+            /*for (Map.Entry<Integer, Book> set : books.entrySet()) {
                 System.out.println("Book ID: " + set.getKey() + " = Book Info: " + set.getValue());
-            }
+            }*/
+
+            // java8 feature forEach loop
+            books.forEach((id, book) -> System.out.println("Book ID: " + id + " = Book Info: " + book));
         }
 
         // method to retrieve book by id

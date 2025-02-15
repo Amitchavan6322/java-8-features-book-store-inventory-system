@@ -42,9 +42,14 @@ public class CustomerService implements CustomerServiceInterface{
     }
 
     public void displayCustomerInfo(){
-        for(Map.Entry<Integer, Customer>set : customers.entrySet()){
+
+        //old for each loop
+        /*for(Map.Entry<Integer, Customer>set : customers.entrySet()){
             System.out.println("Customer ID : " +set.getKey() + " = " + "Customer Info : "
                     + set.getValue());
-        }
+        }*/
+
+        // Java 8 features forEach loop
+        customers.forEach((customerId, customer) -> System.out.println("Customer ID: " + customerId + " = Customer Info: " + customer));
     }
 }
