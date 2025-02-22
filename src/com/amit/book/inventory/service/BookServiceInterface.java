@@ -12,3 +12,4 @@ public interface BookServiceInterface {
     void removeBookById(int bookId);
     void updateBookPrice(int bookId, int newPrice);
 }
+
