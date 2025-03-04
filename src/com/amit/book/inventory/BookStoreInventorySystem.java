@@ -26,20 +26,20 @@ public class BookStoreInventorySystem {
             System.out.println("0: Exit project");
             option = Integer.parseInt(sc.nextLine());
 
-           switch (option){
-               case 1:
-                   bookController.run();
-                   break;
-               case 2:
-                   customerController.run();
-                   break;
-               case 3:
-                   supplierController.run();
-                   break;
-           }
+            switch (option) {
+                case 1:
+                    bookController.run();
+                    break;
+                case 2:
+                    customerController.run();
+                    break;
+                case 3:
+                    supplierController.run();
+                    break;
+            }
 
         }
-            while (option != 0);
-            System.out.println("THANK YOU!");
+        while (option != 0);
+        System.out.println("THANK YOU!");
     }
 }

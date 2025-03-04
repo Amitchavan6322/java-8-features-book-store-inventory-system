@@ -1,5 +1,5 @@
 package com.amit.book.inventory.service;
-//
+
 import com.amit.book.inventory.exception.InvalidBookIDException;
 import com.amit.book.inventory.exception.InvalidBookNameException;
 import com.amit.book.inventory.exception.InvalidBookPriceException;
@@ -12,4 +12,3 @@ public interface BookServiceInterface {
     void removeBookById(int bookId);
     void updateBookPrice(int bookId, int newPrice);
 }
-
